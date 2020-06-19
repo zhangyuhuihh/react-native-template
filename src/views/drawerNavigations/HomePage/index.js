@@ -8,6 +8,15 @@ function HomePage() {
   const topBar = (
     <View style={styles.topBarContainer}>
       <Text>这里是头部</Text>
+      <View style={styles.topBarBtnContainer}>
+        <Button
+          title="侧边栏"
+          style={styles.topBarBtn}
+          onPress={() => {
+            navigation.openDrawer()
+          }}
+        />
+      </View>
     </View>
   )
 
@@ -39,6 +48,15 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  topBarBtnContainer: {
+    position: 'absolute',
+    left: 10,
+    top: 5,
+  },
+  topBarBtn: {
+    width: 50,
+    height: 50,
   },
 })
 
